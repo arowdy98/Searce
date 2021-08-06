@@ -1,0 +1,11 @@
+function confirmEnding(str, target) {
+  let lst = str.slice(str.length-target.length,);
+  if (lst == target){
+    return true;
+  }
+  else{
+    return false;
+  }
+}
+
+confirmEnding("Bastian", "n");

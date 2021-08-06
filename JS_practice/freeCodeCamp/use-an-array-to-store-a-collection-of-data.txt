@@ -1,0 +1,1 @@
+let yourArray=[true, "dsd", 343,34,43]; // Change this line
