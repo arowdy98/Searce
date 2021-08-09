@@ -1,0 +1,14 @@
+function sumFibs(num) {
+  let arr = [1,1];
+  while(arr[arr.length-1] < num){
+    arr.push(arr[arr.length-1]+arr[arr.length-2]);
+  }
+  let sum = 0;
+  for(let i = 0; i <arr.length && arr[i] <= num; i++){
+    if(arr[i]%2) sum+=arr[i];
+  }
+  // console.log(arr);
+  return sum;
+}
+
+console.log(sumFibs(75025));

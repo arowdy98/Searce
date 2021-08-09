@@ -1,0 +1,10 @@
+function sumAll(arr) {
+  let mn = arr[0];
+  let mx = arr[1];
+  if(mn > mx){
+    [mn,mx] = [mx,mn];
+  }
+  return (mx*(mx+1)-mn*(mn-1))/2;
+}
+
+sumAll([1, 4]);

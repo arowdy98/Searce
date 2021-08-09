@@ -1,0 +1,14 @@
+function bouncer(arr) {
+  let i = 0; 
+  while(i <arr.length){
+    if(!arr[i]){
+      arr.splice(i,1);
+    }
+    else{
+       i++;
+    }
+  }
+  return arr;
+}
+
+bouncer([7, "ate", "", false, 9]);

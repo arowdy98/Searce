@@ -1,0 +1,8 @@
+// Only change code below this line
+function urlSlug(title) {
+  let n = title.split(/\W/);
+  n = n.filter(p => p != '')
+  return n.join("-").toLowerCase();
+}
+console.log(urlSlug(" Winter Is  Coming"));
+// Only change code above this line
