@@ -1,0 +1,28 @@
+function gcd(a, b){
+   
+  // Everything divides 0
+  if(b == 0){
+    return a;
+  }
+   
+  return gcd(b, a % b);
+}
+
+function lcm(a,b){
+  return a*b/gcd(a,b);
+}
+function smallestCommons(arr) {
+  let mn = arr[0];
+  let mx = arr[1];
+  if(mn > mx){
+    [mn,mx] = [mx,mn];
+  }
+  let tot = 1;
+  for(let i = mn; i <= mx; i++){
+    tot = lcm(tot,i);
+  }
+  return tot;
+}
+
+
+smallestCommons([1,5]);
