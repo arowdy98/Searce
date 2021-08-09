@@ -1,0 +1,15 @@
+function pairElement(str) {
+  let dekho = {
+    "G": "C",
+    "C": "G",
+    "A": "T",
+    "T": "A"
+  }
+  let narr = [];
+  for(let i = 0; i < str.length; i++){
+    narr.push([str[i],dekho[str[i]]]);
+  }
+  return narr;
+}
+
+pairElement("GCG");

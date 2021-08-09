@@ -1,0 +1,17 @@
+function myReplace(str, before, after) {
+  let arr = str.split(" ");
+  let regl = /[a-z]/;
+  for(let i = 0; i<arr.length; i++){
+    if(arr[i] == before){
+      if(regl.test(arr[i][0])){
+        arr[i] = after.toLowerCase();
+      }
+      else{
+        arr[i] = after[0].toUpperCase() + after.slice(1,);
+      }
+    }
+  }
+  return arr.join(" ");
+}
+
+console.log(myReplace("He is Sleeping on the couch", "Sleeping", "sitting"));

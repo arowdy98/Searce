@@ -1,0 +1,22 @@
+function spinalCase(str) {
+  let nstr = str[0].toLowerCase();
+  let regex2 = /[A-Z]/;
+  let regex3 = /[a-z]|-/;
+  for(let i = 1; i<str.length; i++){
+    if(regex2.test(str[i])){
+      if(str[i-1] != ' '){
+        nstr+= "-";
+      }
+      nstr+= str[i].toLowerCase();
+    }
+    else if(regex3.test(str[i])){
+      nstr+=str[i];
+    }
+    else if(str[i] == ' '){
+      nstr+='-';
+    }
+  }
+  return nstr;
+}
+
+console.log(spinalCase("Teletubbies say Eh-oh"));

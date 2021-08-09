@@ -1,0 +1,21 @@
+function convertHTML(str) {
+  let dekho = {
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&apos;"
+  }
+  let narr = "";
+  for(let i  = 0; i<str.length; i++){
+    if(dekho.hasOwnProperty(str[i])){
+      narr+=dekho[str[i]];
+    }
+    else{
+      narr+=str[i];
+    }
+  }
+  return narr;
+}
+
+convertHTML("Dolce & Gabbana");

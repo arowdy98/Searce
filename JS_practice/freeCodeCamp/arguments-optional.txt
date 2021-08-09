@@ -1,0 +1,19 @@
+function addTogether(...args) {
+  if(typeof(args[0]) !== 'number'){
+    return undefined;
+  }
+  if(args.length == 2){
+    if(typeof(args[1]) !== 'number'){
+      return undefined;
+    }
+    return args[0]+args[1];
+  }
+  return function (b){
+    if(typeof(b) !== 'number'){
+      return undefined;
+    }
+    return args[0]+b;
+  }
+}
+
+addTogether(2,3);
